@@ -1,6 +1,7 @@
 //🟢Setup Procedure - Runs Once to Set The Canvas
 void setup(){
   size(600, 400); 
+  background(255,0,0)
 }
 
 //🎯Variable Declarations Go Here
@@ -8,13 +9,22 @@ void setup(){
 
 //🟢Draw Function - Runs on Repeat
 draw = function(){  
-  background(255,255,255);
-  
+  fill(mouseX,mouseY,255);
+  noStroke();
+  ellipse (mouseX,mouseY,50,50);
+
   if(mousePressed){
-    showXYPositions();
+    text ("yum", random(0,600), random(0,400));
   }
 
-  //🎯New Text Code Should Go Here 🡻
+  //🎯New Text Code Should Go Here 🡻 
+
+textSize (40)
+fill(0,0,255)
+text("My Favorite Foods",150,40);
+text("Watermelon",150,100);
+text("Ramen",150,150);
+text("Mango shaved ice",150,200);
 
 };
 
